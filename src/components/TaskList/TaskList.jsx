@@ -4,13 +4,13 @@ import NewTask from './NewTask'
 import CompleteTask from './CompleteTask'
 import FailedTask from './FailedTask'
 
-const TaskList = ({data}) => {
+const TaskList = ({data, updateTaskStatus}) => {
   return (
     <div id="tasklist" className='h-[58%] overflow-x-auto mt-10 flex items-center justify-start gap-5 flex-nowrap'>
         
         {data.tasks.map((elem,idx)=>{
             if(elem.active){
-                return <AcceptTask key={idx} data ={elem}/>
+                return <AcceptTask key={idx} data ={elem} updateTaskStatus={updateTaskStatus}/>
             }
             if(elem.newTask){
                 return <NewTask key={idx} data ={elem}/>

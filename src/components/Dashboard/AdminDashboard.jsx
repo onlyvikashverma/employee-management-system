@@ -8,7 +8,7 @@ const AdminDashboard = ({ changeUser }) => {
   const adminData = { firstName: "Vikash" };
 
   return (
-    <div className="h-screen w-full p-10">
+    <div className="min-h-screen w-full p-10 bg-transparent animate-fadeIn space-y-10">
       <Header changeUser={changeUser} data={adminData} />
       <CreateTask />
       <AllTask />
